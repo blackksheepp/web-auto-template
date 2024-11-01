@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+html {
+    scroll-behavior: smooth;
+}
+
+.faq-answer {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Custom scrollbar for testimonials */
+.overflow-x-auto {
+    scrollbar-width: thin;
+    scrollbar-color: #CBD5E0 #EDF2F7;
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+    height: 6px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+    background: #EDF2F7;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+    background-color: #CBD5E0;
+    border-radius: 3px;
+}
+
+/* Smooth transitions */
+.transition-transform {
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Mobile menu transition */
+.mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add these styles to your styles.css */
+.testimonials-track {
+    will-change: transform;
+}
+
+.testimonial-slide {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+}
+
+/* Smooth transitions */
+.transition-transform {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Star rating */
+.text-yellow-400 {
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+}
+
+/* Add hover effect to navigation dots */
+[data-index] {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+[data-index]:hover {
+    transform: scale(1.2);
+}
