@@ -3,10 +3,8 @@ var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const dotenv = require('dotenv');
-
 // Load environment variables from .env file
 dotenv.config();
-
 module.exports = {
     entry: {
         index: './src/js/main.js',
@@ -17,6 +15,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js', // Use different names for different entries
         clean: true, // Clean the output directory before emit
+        assetModuleFilename: 'images/[name][ext]', // Add this line for image outputs
     },
     module: {
         rules: [
@@ -49,6 +48,10 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
+            },
+            {
+                test: /\.html$/,
+                use: ['html-loader']  // Add this rule for HTML files
             },
         ],
     },
