@@ -8,7 +8,7 @@ dotenv.config();
 module.exports = {
     entry: {
         index: './src/js/main.js',
-        privacy: './src/js/privacy.js',
+        "privacy-policy": './src/js/privacy-policy.js',
         terms: './src/js/terms.js',
         form: './src/js/form.js',
     },
@@ -64,9 +64,9 @@ module.exports = {
             chunks: ['index'], // Specify which bundle to include
         }),
         new HtmlWebpackPlugin({
-            template: './src/privacy.html',
-            filename: 'privacy.html',
-            chunks: ['privacy'], // Specify which bundle to include
+            template: './src/privacy-policy.html',
+            filename: 'privacy-policy.html',
+            chunks: ['privacy-policy'], // Specify which bundle to include
         }),
         new HtmlWebpackPlugin({
             template: './src/terms.html',
