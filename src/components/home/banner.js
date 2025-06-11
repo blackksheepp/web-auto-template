@@ -52,7 +52,7 @@ export class Banner extends LitElement {
 
                     <!-- Right Side - CTA -->
                     <div class="space-y-4 md:text-right">
-                        <a href="/form.html" class="bg-white ${text('primary', '600')} px-8 py-3 rounded-lg font-semibold text-lg ${hover(bg, 'primary', '50')} ${active(bg, 'primary', '100')} ${focus(ring, 'primary', '200')} focus:ring-2 focus:outline-none transition-colors duration-200 w-full md:w-auto md:ml-auto">
+                        <a href="" class="bg-white ${text('primary', '600')} px-8 py-3 rounded-lg font-semibold text-lg ${hover(bg, 'primary', '50')} ${active(bg, 'primary', '100')} ${focus(ring, 'primary', '200')} focus:ring-2 focus:outline-none transition-colors duration-200 w-full md:w-auto md:ml-auto">
                             ${this.bannerData.ctaText}
                         </a>
                         <div class="text-white">

@@ -122,7 +122,7 @@ export class ContactForm extends LitElement {
                 <div class="text-sm px-1">
                     <input type="checkbox" name="consent" id="consent" value="consent" class="mr-1"> ${formData.consent}
                 </div>
-                <p class="text-sm">${formData.privacyText} <a target="_blank" href="${formData.privacyLink.href}" class="italic ${text('primary', '600')} font-semibold">${formData.privacyLink.text}</a> and <a target="_blank" href="${formData.termsLink.href}" class="italic ${text('primary', '600')} font-semibold">${formData.termsLink.text}</a>.</p>
+                <p class="text-sm">${formData.privacyText} <a target="_blank" href="${''}" class="italic ${text('primary', '600')} font-semibold">${formData.privacyLink.text}</a> and <a target="_blank" href="${''}" class="italic ${text('primary', '600')} font-semibold">${formData.termsLink.text}</a>.</p>
                 <button type="submit" class="w-full ${bg('primary', '600')} text-white px-6 py-3 rounded-md ${hover(bg, 'primary', '700')} transition-colors duration-200">
                     ${formData.submitButton}
                 </button>

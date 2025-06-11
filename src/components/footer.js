@@ -27,7 +27,7 @@ export class Footer extends LitElement {
                             ${footerData.links.map(link => html`
                                 <li>
                                     <a 
-                                        href="${link.href}" 
+                                        href="${''}" 
                                         class="${hover(text, 'primary', '300')}"
                                         ?target="${link.target || ''}"
                                     >

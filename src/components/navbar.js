@@ -49,7 +49,7 @@ export class Navbar extends LitElement {
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center max-w-[70%] md:max-w-none">
-                    <a href="/index.html" class="flex items-center py-2">
+                    <a href="" class="flex items-center py-2">
                         <span class="${text('gray', '600')} text-lg flex flex-row font-bold items-center gap-1 sm:gap-2">
                             <img class="w-20 sm:w-24 md:w-28 lg:w-32 h-auto object-contain transition-all duration-300" src="${logoPath}" alt=""> 
                             <span class="text-xs sm:text-sm md:text-base lg:text-lg">
@@ -61,10 +61,10 @@ export class Navbar extends LitElement {
                 <div class="hidden md:flex flex-row items-center space-x-2 lg:space-x-6">
                     <div class="flex items-center space-x-1 lg:space-x-2">
                         ${navbarData.links && navbarData.links.map(link => html`
-                            <a href="${link.href}" class="py-2 px-1 lg:py-4 lg:px-2 ${text('gray', '500')} ${hover(text, 'gray', '900')} text-xs sm:text-sm lg:text-base">${link.text}</a>
+                            <a href="${''}" class="py-2 px-1 lg:py-4 lg:px-2 ${text('gray', '500')} ${hover(text, 'gray', '900')} text-xs sm:text-sm lg:text-base">${link.text}</a>
                         `)}
                     </div>
-                    <a href="${navbarData.contactButton?.href || '/form.html'}" class="py-1 px-2 lg:py-2 lg:px-4 ${bg('primary', '600')} text-white text-xs sm:text-sm lg:text-base rounded ${hover(bg, 'primary', '500')} transition duration-300">${navbarData.contactButton?.text || 'Contact Us'}</a>
+                    <a href="${''}" class="py-1 px-2 lg:py-2 lg:px-4 ${bg('primary', '600')} text-white text-xs sm:text-sm lg:text-base rounded ${hover(bg, 'primary', '500')} transition duration-300">${navbarData.contactButton?.text || 'Contact Us'}</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button class="mobile-menu-button p-2" aria-label="Menu">
@@ -77,9 +77,9 @@ export class Navbar extends LitElement {
         </div>
         <div class="mobile-menu hidden md:hidden overflow-hidden transition-all duration-300">
             ${navbarData.links && navbarData.links.map(link => html`
-                <a href="${link.href}" class="block py-2 px-4 text-sm ${hover(bg, 'gray', '200')}">${link.text}</a>
+                <a href="${''}" class="block py-2 px-4 text-sm ${hover(bg, 'gray', '200')}">${link.text}</a>
             `)}
-            <a href="${navbarData.contactButton?.href || '/form.html'}" class="block py-2 px-4 text-sm ${bg('primary', '600')} text-white ${hover(bg, 'primary', '500')}">${navbarData.contactButton?.text || 'Contact Us'}</a>
+            <a href="${''}" class="block py-2 px-4 text-sm ${bg('primary', '600')} text-white ${hover(bg, 'primary', '500')}">${navbarData.contactButton?.text || 'Contact Us'}</a>
         </div>
       </nav>
     `;
